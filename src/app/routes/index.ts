@@ -8,6 +8,7 @@ import { FeedBackRoutes } from '../modules/feedbacks/feedbacks.routes';
 import { ReviewAndRatingRoutes } from '../modules/reviews/reviews.route';
 import { SpecializationRoutes } from '../modules/specialization/specialization.routes';
 import { SlotRoutes } from '../modules/schedules/schedules.routes';
+import { AppointmentBookingRoutes } from '../modules/appointment/appointment.routes';
 
 const router = express.Router();
 
@@ -47,6 +48,10 @@ const moduleRoutes = [
   {
     path: '/slots',
     route: SlotRoutes,
+  },
+  {
+    path: '/appointment-booking',
+    route: AppointmentBookingRoutes,
   },
 ];
 
