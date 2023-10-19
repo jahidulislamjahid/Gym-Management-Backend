@@ -10,6 +10,7 @@ import { SpecializationRoutes } from '../modules/specialization/specialization.r
 import { SlotRoutes } from '../modules/schedules/schedules.routes';
 import { AppointmentBookingRoutes } from '../modules/appointment/appointment.routes';
 import { BlogRoutes } from '../modules/blogs/blogs.routes';
+import { FaqRoutes } from '../modules/faq/faq.routes';
 
 const router = express.Router();
 
@@ -57,6 +58,10 @@ const moduleRoutes = [
   {
     path: '/blogs',
     route: BlogRoutes,
+  },
+  {
+    path: '/faqs',
+    route: FaqRoutes,
   },
 ];
 
