@@ -7,6 +7,7 @@ import { MedServiceRoutes } from '../modules/service/service.routes';
 import { FeedBackRoutes } from '../modules/feedbacks/feedbacks.routes';
 import { ReviewAndRatingRoutes } from '../modules/reviews/reviews.route';
 import { SpecializationRoutes } from '../modules/specialization/specialization.routes';
+import { SlotRoutes } from '../modules/schedules/schedules.routes';
 
 const router = express.Router();
 
@@ -42,6 +43,10 @@ const moduleRoutes = [
   {
     path: '/specialization',
     route: SpecializationRoutes,
+  },
+  {
+    path: '/slots',
+    route: SlotRoutes,
   },
 ];
 
