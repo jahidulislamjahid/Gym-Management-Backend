@@ -3,11 +3,13 @@ import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
+import { IRequestUser } from '../users/users.interface';
 import { stylesFilterableFields } from './category.constants';
 import { CategoryService } from './category.service';
 
 const createCategory = catchAsync(async (req: Request, res: Response) => {
-  const result = await CategoryService.createCategory(req);
+  const profileId = (req.user as IRequestUser).profileId;
+  const result = await CategoryService.createCategory(profileId, req);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,

@@ -18,6 +18,7 @@ import {
 } from './category.interface';
 
 const createCategory = async (
+  profileId: string,
   req: Request
 ): Promise<Category> => {
   const data = req.body as ICategoryRequest;
