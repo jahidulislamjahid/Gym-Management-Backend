@@ -5,6 +5,7 @@ import { UserRoutes } from '../modules/users/users.routes';
 import { ProductsRoutes } from '../modules/products/products.routes';
 import { MedServiceRoutes } from '../modules/service/service.routes';
 import { FeedBackRoutes } from '../modules/feedbacks/feedbacks.routes';
+import { ReviewAndRatingRoutes } from '../modules/reviews/reviews.route';
 
 const router = express.Router();
 
@@ -32,6 +33,10 @@ const moduleRoutes = [
   {
     path: '/feedback-forms',
     route: FeedBackRoutes,
+  },
+  {
+    path: '/review-ratings',
+    route: ReviewAndRatingRoutes,
   },
 ];
 
