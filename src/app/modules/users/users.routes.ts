@@ -1,7 +1,9 @@
 import express from 'express';
 import { userRole } from '@prisma/client';
 import auth from '../../middlewares/auth';
+import validateRequest from '../../middlewares/validateRequest';
 import { UserController } from './users.controller';
+import { UserValidation } from './users.validation';
 
 const router = express.Router();
 
@@ -23,6 +25,7 @@ router.get(
 
 router.patch(
   '/update-profile/:profileId',
+  validateRequest(UserValidation.updateUser),
   UserController.updateProfileInfo
 );
 
