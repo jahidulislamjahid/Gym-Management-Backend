@@ -4,6 +4,7 @@ import { CategoryRoutes } from '../modules/category/category.routes';
 import { UserRoutes } from '../modules/users/users.routes';
 import { ProductsRoutes } from '../modules/products/products.routes';
 import { MedServiceRoutes } from '../modules/service/service.routes';
+import { FeedBackRoutes } from '../modules/feedbacks/feedbacks.routes';
 
 const router = express.Router();
 
@@ -27,6 +28,10 @@ const moduleRoutes = [
   {
     path: '/services',
     route: MedServiceRoutes,
+  },
+  {
+    path: '/feedback-forms',
+    route: FeedBackRoutes,
   },
 ];
 
