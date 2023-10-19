@@ -1,16 +1,16 @@
 import express from 'express';
 import { AuthRoutes } from '../modules/auth/auth.routes';
+import { BlogRoutes } from '../modules/blogs/blogs.routes';
 import { CategoryRoutes } from '../modules/category/category.routes';
-import { UserRoutes } from '../modules/users/users.routes';
+import { FaqRoutes } from '../modules/faq/faq.routes';
 import { ProductsRoutes } from '../modules/products/products.routes';
+import { UserRoutes } from '../modules/users/users.routes';
 import { MedServiceRoutes } from '../modules/service/service.routes';
 import { FeedBackRoutes } from '../modules/feedbacks/feedbacks.routes';
 import { ReviewAndRatingRoutes } from '../modules/reviews/reviews.route';
-import { SpecializationRoutes } from '../modules/specialization/specialization.routes';
 import { SlotRoutes } from '../modules/schedules/schedules.routes';
+import { SpecializationRoutes } from '../modules/specialization/specialization.routes';
 import { AppointmentBookingRoutes } from '../modules/appointment/appointment.routes';
-import { BlogRoutes } from '../modules/blogs/blogs.routes';
-import { FaqRoutes } from '../modules/faq/faq.routes';
 
 const router = express.Router();
 
@@ -36,7 +36,7 @@ const moduleRoutes = [
     route: MedServiceRoutes,
   },
   {
-    path: '/feedback-forms',
+    path: '/feedbacks',
     route: FeedBackRoutes,
   },
   {
@@ -44,12 +44,12 @@ const moduleRoutes = [
     route: ReviewAndRatingRoutes,
   },
   {
-    path: '/specialization',
-    route: SpecializationRoutes,
-  },
-  {
     path: '/slots',
     route: SlotRoutes,
+  },
+  {
+    path: '/specialization',
+    route: SpecializationRoutes,
   },
   {
     path: '/appointment-booking',
