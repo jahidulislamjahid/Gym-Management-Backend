@@ -6,6 +6,7 @@ import { ProductsRoutes } from '../modules/products/products.routes';
 import { MedServiceRoutes } from '../modules/service/service.routes';
 import { FeedBackRoutes } from '../modules/feedbacks/feedbacks.routes';
 import { ReviewAndRatingRoutes } from '../modules/reviews/reviews.route';
+import { SpecializationRoutes } from '../modules/specialization/specialization.routes';
 
 const router = express.Router();
 
@@ -37,6 +38,10 @@ const moduleRoutes = [
   {
     path: '/review-ratings',
     route: ReviewAndRatingRoutes,
+  },
+  {
+    path: '/specialization',
+    route: SpecializationRoutes,
   },
 ];
 
