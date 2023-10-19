@@ -7,6 +7,8 @@ import { ReviewAndRatingValidation } from './reviews.validation';
 
 const router = express.Router();
 
+router.get('/my-reviews', auth(userRole.USER), ReviewController.getMyReviews);
+
 router.post(
   '/add-review',
   auth(userRole.USER),
